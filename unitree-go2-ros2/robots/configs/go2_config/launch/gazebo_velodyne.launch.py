@@ -42,7 +42,7 @@ def generate_launch_description():
         description="Use simulation (Gazebo) clock if true",
     )
     declare_rviz = DeclareLaunchArgument(
-        "rviz", default_value="false", description="Launch rviz"
+        "rviz", default_value="true", description="Launch rviz"
     )
     declare_robot_name = DeclareLaunchArgument(
         "robot_name", default_value="go2", description="Robot name"
@@ -128,9 +128,9 @@ def generate_launch_description():
     slam_ld = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
             os.path.join(
-                get_package_share_directory("go2_slam"),
+                get_package_share_directory("go2_config"),
                 "launch",
-                "go2_slamtoolbox.launch.py",
+                "slam.launch.py",
             )
         ),
        

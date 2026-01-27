@@ -56,7 +56,7 @@ def generate_launch_description():
 
         DeclareLaunchArgument(
             name='rviz', 
-            default_value='true',
+            default_value='false',
             description='Run rviz'
         ),
 
@@ -66,7 +66,7 @@ def generate_launch_description():
                 'map': LaunchConfiguration("map"),
                 'params_file': LaunchConfiguration("params_file"),
                 'sim': LaunchConfiguration("sim"),
-                'rviz': LaunchConfiguration("rviz")
+                'rviz': 'true'
             }.items()
         )
     ])

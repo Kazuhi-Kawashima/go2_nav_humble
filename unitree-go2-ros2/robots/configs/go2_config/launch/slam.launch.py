@@ -40,7 +40,7 @@ def generate_launch_description():
 
         DeclareLaunchArgument(
             name='sim', 
-            default_value='false',
+            default_value='true',
             description='Enable use_sime_time to true'
         ),
 
@@ -55,7 +55,7 @@ def generate_launch_description():
             launch_arguments={
                 'slam_params_file': LaunchConfiguration("slam_params_file"),
                 'sim': LaunchConfiguration("sim"),
-                'rviz': LaunchConfiguration("rviz")
+                'rviz': 'false'
             }.items()
         )
     ])

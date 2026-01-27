@@ -49,12 +49,12 @@ def generate_launch_description():
             description='Run rviz'
         ),
 
-        IncludeLaunchDescription(
-            PythonLaunchDescriptionSource(navigation_launch_path),
-            launch_arguments={
-                'use_sim_time': LaunchConfiguration("sim")
-            }.items()
-        ),
+        # IncludeLaunchDescription(
+        #     PythonLaunchDescriptionSource(navigation_launch_path),
+        #     launch_arguments={
+        #         'use_sim_time': LaunchConfiguration("sim")
+        #     }.items()
+        # ),
 
         IncludeLaunchDescription(
             PythonLaunchDescriptionSource(slam_launch_path),
