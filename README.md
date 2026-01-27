@@ -28,7 +28,7 @@ rosdep install --from-paths src --ignore-src -r -y
 ```bash
 cd <your_ws>
 colcon build
-. <your_ws>/install/setup.bash
+source <your_ws>/install/setup.bash
 ```
 
 ### 1.3 Run mapping:
