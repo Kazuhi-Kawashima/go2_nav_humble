@@ -19,7 +19,7 @@ sudo apt install -y python3-rosdep
 rosdep update
 
 cd <your_ws>/src
-git@github.com:Kazuhi-Kawashima/go2_nav_humble.git
+git clone git@github.com:Kazuhi-Kawashima/go2_nav_humble.git
 cd <your_ws>
 rosdep install --from-paths src --ignore-src -r -y
 ```
