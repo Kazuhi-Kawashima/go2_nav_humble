@@ -9,7 +9,7 @@ sudo apt install ros-humble-ros2-controllers
 sudo apt install ros-humble-ros2-control
 sudo apt install ros-humble-velodyne
 sudo apt install ros-humble-velodyne-gazebo-plugins
-sudo apt-get install ros-humble-velodyne-description
+sudo apt install ros-humble-velodyne-description
 ```
 
 ### 1.1 Clone and install all dependencies:
