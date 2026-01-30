@@ -24,6 +24,7 @@ setup(
     entry_points={
         "console_scripts": [
             "go2_autoware_bridge_node = go2_autoware_bridge.bridge_node:main",
+            "go2_cmd_vel_bridge_node = go2_autoware_bridge.cmd_vel_bridge:main",
         ],
     },
 )

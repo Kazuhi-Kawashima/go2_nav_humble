@@ -21,6 +21,19 @@ def generate_launch_description() -> LaunchDescription:
                         "base_frame_id": "base_link",
                     }
                 ],
-            )
+            ),
+            Node(
+                package="go2_autoware_bridge",
+                executable="go2_cmd_vel_bridge_node",
+                name="go2_cmd_vel_bridge",
+                output="screen",
+                parameters=[
+                    {
+                        "input_twist_topic": "/control/command/twist",
+                        "input_type": "twist_stamped",
+                        "output_cmd_vel_topic": "/cmd_vel",
+                    }
+                ],
+            ),
         ]
     )

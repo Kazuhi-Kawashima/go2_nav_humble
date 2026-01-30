@@ -95,3 +95,17 @@ ros2 launch go2_autoware_bridge go2_autoware_bridge.launch.py
 - `output_odom_topic` (default: `/localization/kinematic_state`)
 - `odom_frame_id` (default: `odom`)
 - `base_frame_id` (default: `base_link`)
+
+### 2.6 Autoware 制御出力 -> Go2 cmd_vel ブリッジ
+Autoware Universe の制御出力（Twist/TwistStamped）を Go2 の `cmd_vel` に
+流し込みたい場合、`go2_cmd_vel_bridge_node` を利用できます。
+
+#### 2.6.1 起動
+```bash
+ros2 run go2_autoware_bridge go2_cmd_vel_bridge_node
+```
+
+#### 2.6.2 主なパラメータ
+- `input_twist_topic` (default: `/control/command/twist`)
+- `input_type` (default: `twist_stamped`, `twist` を指定可能)
+- `output_cmd_vel_topic` (default: `/cmd_vel`)
