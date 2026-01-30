@@ -1,0 +1,4 @@
+- name: Install gdown to download files from CMakeLists.txt
+  community.general.pipx:
+    name: gdown
+    executable: /usr/bin/pipx
