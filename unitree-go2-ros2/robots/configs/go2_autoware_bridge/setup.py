@@ -13,6 +13,7 @@ setup(
         ("share/" + package_name, ["package.xml"]),
         ("share/" + package_name + "/launch", [
             "launch/go2_autoware_bridge.launch.py",
+            "launch/autoware_go2.launch.py",
         ]),
     ],
     install_requires=["setuptools"],

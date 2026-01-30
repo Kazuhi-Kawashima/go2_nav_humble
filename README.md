@@ -109,3 +109,15 @@ ros2 run go2_autoware_bridge go2_cmd_vel_bridge_node
 - `input_twist_topic` (default: `/control/command/twist`)
 - `input_type` (default: `twist_stamped`, `twist` を指定可能)
 - `output_cmd_vel_topic` (default: `/cmd_vel`)
+
+### 2.7 Autoware 起動込みの統合 launch
+Autoware Universe を同時に起動したい場合は `autoware_go2.launch.py` を使います。
+Autoware の launch パッケージとファイル名は引数で指定できます。
+
+#### 2.7.1 起動例
+```bash
+ros2 launch go2_autoware_bridge autoware_go2.launch.py \\
+  enable_autoware:=true \\
+  autoware_launch_package:=autoware_launch \\
+  autoware_launch_file:=autoware.launch.xml
+```
